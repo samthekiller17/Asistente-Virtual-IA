@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NOVA · Tu compañero inteligente de videojuegos</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Barra lateral: se contrae en escritorio y es un cajón en móvil -->
+<aside id="side" class="side">
+  <div class="brand"><span class="orb sm"></span><b class="lbl">NOVA</b>
+    <button id="collapse" class="ico" aria-label="Contraer menú">◀</button></div>
+  <button class="newchat" data-go="welcome">＋ <span class="lbl">Nueva conversación</span></button>
+  <nav id="nav"></nav>
+  <div class="user"><span class="av">J</span><span class="lbl">Jugador/a<small>Nivel 12 · Perfil</small></span></div>
+</aside>
+<div class="scrim" id="scrim"></div>
+
+<main class="app">
+  <header class="top">
+    <button class="ico menu" id="burger" aria-label="Abrir menú">☰</button>
+    <button class="ico" id="back" aria-label="Volver al paso anterior">← Atrás</button>
+    <div class="agent"><span class="orb xs"></span><span><b>NOVA</b><small><i class="dot"></i>En línea · Tu compañero inteligente de videojuegos</small></span></div>
+  </header>
+  <section id="main" class="main" aria-live="polite"></section>
+  <!-- Campo de conversación siempre visible -->
+  <form id="composer" class="composer">
+    <button type="button" class="ico" title="Adjuntar imagen">📎</button>
+    <input id="msg" placeholder="Escribe tu duda o elige una opción…" autocomplete="off">
+    <button class="send" aria-label="Enviar">➤</button>
+  </form>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
