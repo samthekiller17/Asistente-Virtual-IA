@@ -3,34 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="NOVA, tu compañero inteligente de videojuegos: guías, estrategias y soluciones a problemas técnicos.">
+<meta name="theme-color" content="#07061a">
 <title>NOVA · Tu compañero inteligente de videojuegos</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+ 
 <!-- Barra lateral: se contrae en escritorio y es un cajón en móvil -->
-<aside id="side" class="side">
-  <div class="brand"><span class="orb sm"></span><b class="lbl">NOVA</b>
-    <button id="collapse" class="ico" aria-label="Contraer menú">◀</button></div>
-  <button class="newchat" data-go="welcome">＋ <span class="lbl">Nueva conversación</span></button>
-  <nav id="nav"></nav>
-  <div class="user"><span class="av">J</span><span class="lbl">Jugador/a<small>Nivel 12 · Perfil</small></span></div>
+<aside id="side" class="side" aria-label="Menú principal">
+  <div class="brand">
+    <span class="orb sm" aria-hidden="true"></span><b class="lbl">NOVA</b>
+    <button type="button" id="collapse" class="ico" aria-label="Contraer menú" aria-controls="side" aria-expanded="true">◀</button>
+  </div>
+  <button type="button" class="newchat" data-action="home">＋ <span class="lbl">Nueva conversación</span></button>
+  <nav id="nav" aria-label="Secciones"></nav>
+  <div class="user"><span class="av" aria-hidden="true">J</span><span class="lbl">Jugador/a<small>Nivel 12 · Perfil</small></span></div>
 </aside>
 <div class="scrim" id="scrim"></div>
-
+ 
 <main class="app">
   <header class="top">
-    <button class="ico menu" id="burger" aria-label="Abrir menú">☰</button>
-    <button class="ico" id="back" aria-label="Volver al paso anterior">← Atrás</button>
-    <div class="agent"><span class="orb xs"></span><span><b>NOVA</b><small><i class="dot"></i>En línea · Tu compañero inteligente de videojuegos</small></span></div>
+    <button type="button" class="ico menu" id="burger" aria-label="Abrir menú" aria-controls="side" aria-expanded="false">☰</button>
+    <button type="button" class="ico" id="back" aria-label="Volver al paso anterior">← Atrás</button>
+    <div class="agent">
+      <span class="orb xs" aria-hidden="true"></span>
+      <span><b>NOVA</b><small><i class="dot"></i>En línea · Tu compañero inteligente de videojuegos</small></span>
+    </div>
   </header>
-  <section id="main" class="main" aria-live="polite"></section>
+ 
+  <!-- Aquí script.js dibuja cada pantalla -->
+  <section id="main" class="main"></section>
+ 
   <!-- Campo de conversación siempre visible -->
   <form id="composer" class="composer">
-    <button type="button" class="ico" title="Adjuntar imagen">📎</button>
-    <input id="msg" placeholder="Escribe tu duda o elige una opción…" autocomplete="off">
-    <button class="send" aria-label="Enviar">➤</button>
+    <button type="button" class="ico" title="Adjuntar imagen (próximamente)" aria-label="Adjuntar imagen" disabled>📎</button>
+    <input id="msg" placeholder="Escribe tu duda o elige una opción…" aria-label="Escribe tu duda" autocomplete="off">
+    <button type="submit" class="send" aria-label="Enviar">➤</button>
   </form>
 </main>
+ 
 <script src="script.js"></script>
 </body>
 </html>
+ 
